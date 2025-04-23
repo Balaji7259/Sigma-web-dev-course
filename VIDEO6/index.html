@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Let's learn it</title>
+</head>
+
+<body>
+    <h1>Applications to assistant teaching post</h1>
+    <form action="post">
+        <div>
+            <label for="username">Enter the username</label>
+            <input type="text" name="username" placeholder="Enter your name" autofocus>
+        </div>
+        <div>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female"> female</label>
+        </div>
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to news letter</label>
+        </div>
+        <label for="comment"> Describe yourself</label>
+        <br>
+        <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+
+        <div>
+            <select name="fruits" required>
+                <option value="Apple">Apple</option>
+                <option value="Bannana">Bannana</option>
+                <option value="Cherry">Cherry</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>
