@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        [data-color="primary"]{
+            margin-top: 45px;
+        } */
+
+        /* .box:nth-child(odd){
+            background-color: rgb(36, 36, 199);
+        } */
+
+        /* .box:nth-last-child(1){
+            background-color: red;
+        } */
+
+        
+
+        .boxes::After{
+            content: "Sigma Course is Good";
+            color: red;
+        }
+
+        ::selection{
+            color:blue;
+            background-color: aquamarine;
+        }
+
+        .box::first-letter{
+            color: peru;
+            font-size: 56px;
+        }
+
+        input::placeholder{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <h1>
+            More than types of CSS Selectors
+        </h1>
+        <div data-color="primary" class="box">Hey I am first div Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div><input type="text" id="m" placeholder="Enter Your Name">
+        </div>
+
+        <!-- <label for="m">Name</label> -->
+    </div>
+</body>
+</html>
