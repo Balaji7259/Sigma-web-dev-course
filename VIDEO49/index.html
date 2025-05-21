@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover and object-position</title>
+    <style>
+        .container {
+            width: 466px;
+            height: 488px;
+            border: 2px solid black;
+            background-position: center ;
+            background-clip: padding-box;
+            background-repeat: no-repeat;
+            /* <- Add this line */
+            background-size: contain;
+            /* Optional: ensures the image fits inside */
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s");
+        }
+
+
+        img {
+            width: 466px;
+            height: 488px;
+            object-fit: cover;
+            /* object-fit: cover; */
+            /* padding: 5px; */
+            object-position: 10px 20px;
+            /* animation: balaji 3s ease-in-out 1s 2 alternate-reverse; */
+        }
+
+        /* @keyframes balaji {
+            from{
+                transform: translateX(1000px);
+            }
+            to{
+                
+            } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1zwhySGCEBxRRFYIcQgvOLOpRGqrT3d7Qng&s" alt=""> -->
+    </div>
+</body>
+
+</html>
