@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        /* .container{
+            display: flex;
+        } */
+        img{
+            width: 80vw;
+            /* height: 50vh; */
+            /* object-fit: cover; */
+        }
+
+        .photography {
+            filter: grayscale(100);
+            /* filter: sepia(100%) grayscale(100%) brightness(100%) blur(1px); */
+            filter: invert(0.29);
+        }
+
+        .boss{
+            filter: brightness(130%) contrast(1);
+            opacity: 0.9;
+        }
+
+        .rcb{
+            filter: brightness(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="photography" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+        <img class="boss" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT6C2wuitvhyXtYZcL2T1BJ4RS-X5BtCixvysrupBUmDnQBcRNWVvPUyORL0Bh16SYZrOZgMR1nKcHdqx6H2bwagg" alt="">
+        <img class="rcb" src="https://img-cdn.thepublive.com/fit-in/640x430/filters:format(webp)/sportsyaari/media/media_files/2024/11/26/XWxd9Ni1oAAmw5DUhY4I.jpg" alt="">
+    </div>
+</body>
+</html>
