@@ -92,7 +92,7 @@ nav button {
 
 .separation {
     height: 7px;
-    background-color: rgb(51, 47, 47);
+    background-color: rgb(120, 120, 120);
 }
 
 .btn {
@@ -160,7 +160,7 @@ nav button {
 
 .secimg video {
     position: absolute;
-    top: 51px;
+    top: 95px;
     right: 0;
     width: ;
 }
@@ -253,7 +253,7 @@ footer {
 
 .footer-item a {
     font-size: 14px;
-    color: rgb(99, 97, 97);
+    color: rgb(130, 129, 129);
 }
 
 .footer {
@@ -301,10 +301,13 @@ footer {
 
     .secimg video {
         width: 305px;
+        top : 72px
     }
 
     footer{
         max-width: 90vw;
     }
 }
+
+
 
