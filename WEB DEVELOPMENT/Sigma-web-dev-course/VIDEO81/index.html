@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            background-color: green;
+            color: white;
+            font-family: 'Martel Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div>Initializing Hacking...</div>
+    <script>
+        const additem = async (item) => {
+            await randomDelay();
+            let div = document.createElement('div');
+            div.innerHTML = item
+            document.body.appendChild(div);
+        }
+
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                let delay = 1 + 6 * Math.random(); // Random delay between 1 and 7 seconds
+                setTimeout(() => {
+                    resolve(); // Convert to milliseconds
+                }, delay * 1000);
+            });
+        }
+        async function main() {
+
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div");
+                last = last[last.length - 1]; // Get the last div
+                if (last.innerHTML.endsWith('...')) {
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3); // Remove the last three dots
+                } else {
+                    last.innerHTML += '.'; // Add a dot
+                }
+            }, 500)
+
+            let text = [
+                "Initializing Hacking",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"
+            ]
+
+            for (const item of text) {
+                additem(item);
+            }
+
+            await randomDelay(); // Wait for the last item to be added
+            clearInterval(t); // Stop the blinking dots
+        }
+        main()
+    </script>
+</body>
+
+</html>
